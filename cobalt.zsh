@@ -25,7 +25,9 @@ COMMANDS
 }
 
 function cobalt() {
-    if docker container inspect cobalt > /dev/null 2>&1; then
+    if [[ -z $(docker images -q cobaltstrike 2>/dev/null) ]]; then
+        echo -e "\x1B[01;31m[-]\x1B[0m No Cobalt Strike docker image found"
+    elif docker container inspect cobalt > /dev/null 2>&1; then
         case $1 in
             "help")   usage ;;
             "logs")   docker logs -f cobalt ;;
