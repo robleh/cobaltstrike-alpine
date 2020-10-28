@@ -20,7 +20,7 @@ You probably want to mount a host directory into the container. This provides a 
 docker run -it --name cobalt -v $HOME/.cobaltsrike:/mnt -p 50050:50050 -p 443:443 -p 80:80 cobaltstrike $YOUR_IP $TEAMSERVER_PASSWORD /mnt/c2.profile
 ```
 
-## Zsh Function
+## Shell function
 I use the included `cobalt` shell function/script for convenience. It creates a mount at `$XDG_DATA_HOME/cobaltstrike` or `~/.cobaltstrike`.
 
 To start a teamserver:
