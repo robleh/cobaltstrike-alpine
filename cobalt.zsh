@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 
 if [[ -z "$XDG_DATA_HOME" ]]; then
-    COBALT_MOUNT="$HOME$"/.cobaltstrike
+    COBALT_MOUNT="$HOME"/.cobaltstrike
 else
     COBALT_MOUNT="$XDG_DATA_HOME"/cobaltstrike
 fi

@@ -11,7 +11,7 @@ ENV JAVA_MINIMAL="/opt/java-minimal"
 # Use jlink to create a smaller Java runtime
 RUN /usr/lib/jvm/java-11-openjdk/bin/jlink \
     --verbose \
-    --add-modules java.base,java.management \
+    --add-modules java.base,java.management,java.desktop \
     --compress 2 --strip-debug --no-header-files --no-man-pages \
     --output "$JAVA_MINIMAL"
 
